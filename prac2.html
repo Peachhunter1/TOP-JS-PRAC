@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+
+    <body>
+
+        <script>
+            
+            function sum() {
+                let numberA = parseInt(prompt("a is:", "input numeric value"));
+                //remember that 'parseInt' function is there to return the numeric value after after the user input the number in the 'prompt'. prompt returns string values (run console log to confirm this).
+                let numberB = parseInt(prompt("b is:", "input numeric value"));
+                return numberA + numberB;
+            }
+
+            alert("the sum of a and b is:" + sum());
+
+            function add7(num) {
+                return console.log(num + 7);
+            }
+
+            function multiply(a, b) {
+                return console.log(a * b);
+            }
+
+            function capitalize(string) {
+                let firstLetter = string.charAt(0);
+                let capitalized = firstLetter.toUpperCase();
+                let result = capitalized + string.slice(1);
+                return console.log(result);
+            }
+
+            function lastLetter(string) {
+                return string.slice(-1);
+            }
+
+            let answer = parseInt(prompt("Please enter the number you would like to FizzBuzz up to: "));
+            // I put 'parseInt' function to ensure the returned value of 'answer' is a number.
+            // i <= answer; 'answer' must return numeric value through 'parseInt' function
+            
+            for (let i = 1; i <= answer; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    console.log("FizzBuzz");
+                } else if (i % 5 === 0) {
+                    console.log("Buzz");
+                } else if (i % 3 === 0) {
+                    console.log("Fizz");
+                } else {
+                console.log(i); // this part means: the loop "for / let" will return numbers from 1 up until whatever the user input in variable "answer" (i.e. if 'answer' user input = 9, i = 1, 2, 3, ... , 9)
+
+                //once looped numbers are returned, and the numbers from 'i' are NOT divisble by 3 (remainder NOT 0), then it will continue to return numbers ('i') until the user input ('answer') 9.
+                }
+            }
+
+            let c = "Hello World!";
+
+            function add() {
+                return c;
+            }
+
+            function print() {
+                return add(); // the thing about this code is, if you put add(); then invoking function print(); will return "undefined".
+
+                // make sure to always include <return> when you aren't certain if the function will return the desired output when invoked.
+            }
+
+
+        </script>
+    </body>
+
+</head>
+</html>
